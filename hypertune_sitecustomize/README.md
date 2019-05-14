@@ -30,6 +30,7 @@ ENV PYTHONPATH /var/sitecustomize
 # QuickStart
 Run the sample in this directory:
 ```
+# Build and push the docker image to Google Container Registry(GCR).
 PROJECT_ID=<your-project-id>
 IMAGE_REPO=<your-gcr-image-repo>
 TAG=<your-image-tag>

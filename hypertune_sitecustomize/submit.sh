@@ -1,12 +1,5 @@
 #!/bin/bash
 
-# Build and push the docker image to Google Container Registry(GCR).
-PROJECT_ID=<your-project-id>
-IMAGE_REPO=<your-gcr-image-repo>
-TAG=<your-image-tag>
-IMAGE_URI=gcr.io/$PROJECT_ID/$IMAGE_REPO:$TAG
-docker build -t $IMAGE_URI ./ && docker push $IMAGE_URI
-
 # Create config.yaml
 cat > config.yaml <<EOF
 ---
