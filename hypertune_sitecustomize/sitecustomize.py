@@ -74,6 +74,7 @@ class SummaryFileWriterWrapper(object):
             tag_match = value.tag.endswith('training/hptuning/metric')
           if tag_match:
             objective = value.simple_value
+            tf.logging.info('Reporting hypertune metric {} with value [{}] at step {}.'.format(self.hp_metric_tag, objective, global_step))
             self.hpt.report_hyperparameter_tuning_metric(
                 hyperparameter_metric_tag=self.hp_metric_tag,
                 metric_value=objective,
